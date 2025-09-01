@@ -1,0 +1,36 @@
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '203.00299301500993' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '200.1607471010961' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '203.1450597962496' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '201.0758340894294' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '200.46767369440664' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:64: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '201.20384500230193' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] *= (1 + np.random.uniform(-0.01, 0.02))
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '200.42228085323814' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '196.55642438722813' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '204.17766903506575' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '199.94076023617313' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '196.86654389200447' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '196.8608014783054' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '201.9064797362665' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '201.82268974920552' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '202.09095467074093' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '199.58751894575016' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '200.0751810496376' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)
+C:\xampp\htdocs\catnip\python\predict_sales.py:73: FutureWarning: Setting an item of incompatible dtype is deprecated and will raise an error in a future version of pandas. Value '204.69824687248317' has dtype incompatible with int64, please explicitly cast to a compatible dtype first.
+  current_row['Daily_Income'] = base_income * (1 + income_variation)

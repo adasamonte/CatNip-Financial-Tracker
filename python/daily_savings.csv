@@ -1,0 +1,8 @@
+Day_ID,Day,Daily_Income,Daily_Fixed_Expenses,Daily_Variable_Expenses,Unexpected_Daily_Costs,Daily_Savings_From_Previous_Day,Daily_Savings,Description
+9,1,115,30,15,10,30,90,bag
+10,2,115,30,15,10,90,150,lol
+11,3,115,30,15,10,150,210,
+12,4,115,30,15,10,210,270,
+13,5,115,30,15,10,270,330,
+14,6,115,30,15,10,330,390,
+15,7,115,30,15,10,390,450,

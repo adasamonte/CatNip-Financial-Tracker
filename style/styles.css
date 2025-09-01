@@ -1,0 +1,1021 @@
+body {
+    background-color: #FFF8E1; /* Light background color */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the body takes full height */
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 10px 0; /* Slimmer header */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: center; /* Center vertically */
+}
+
+.logo-container {
+    margin: 20px 0;
+}
+
+.cat-logo {
+    width: 180px; /* Adjusted size */
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.cat-logo:hover {
+    transform: scale(1.05);
+}
+
+main {
+    flex: 1; /* This will push the footer down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 80px 0 60px; /* Adjusted bottom margin to account for footer */
+    padding: 20px;
+}
+
+h2 {
+    color: #FF5722; /* Heading color */
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+p {
+    margin: 10px 0; /* Add margin for spacing */
+}
+
+.button-container {
+    margin: 20px 0;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.rounded-button {
+    padding: 8px 20px;
+    border-radius: 25px !important;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    background: white;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 0 5px;
+}
+
+.rounded-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+footer {
+    background-color: #ffc107;
+    padding: 10px 0;
+    margin-top: auto; /* This helps stick it to the bottom */
+    position: relative; /* Changed from fixed */
+    width: 100%;
+}
+
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+/* Modal positioning container */
+.modal-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    max-width: 400px; /* Ensure it doesn't grow */
+    max-height: 400px; /* Ensure it doesn't grow */
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+/* Form container to ensure proper spacing */
+.form-container {
+    flex: 1;
+    overflow-y: auto;
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+/* Modal header */
+.modal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    color: #333;
+    text-align: center;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input:not([type="radio"]) {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #FF5722;
+    outline: none;
+}
+
+/* Gender selection styling */
+.gender-selection {
+    margin: 20px 0;
+}
+
+.radio-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 8px;
+}
+
+.radio-group input[type="radio"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* Submit button */
+.modal-content .btn-primary {
+    width: 100%;
+    padding: 12px;
+    margin-top: auto;
+    border: none;
+    border-radius: 8px;
+    background-color: #FF5722;
+    color: white;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.modal-content .btn-primary:hover {
+    background-color: #F4511E;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close:hover {
+    color: #333;
+}
+
+/* Scrollbar styling */
+.modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.modal-content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* File input styling */
+input[type="file"] {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+/* Date input styling */
+input[type="date"] {
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.card {
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+/* Dashboard Styles */
+.dashboard-container {
+    display: flex;
+    min-height: calc(100vh - 120px);
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding-bottom: 60px; /* Height of footer */
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    position: fixed;
+    left: 20px;
+    top: 90px; /* Increased distance from top */
+    bottom: 80px;
+    overflow-y: auto;
+}
+
+.profile {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+    border: 3px solid #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: auto;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.export-btn {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    margin-left: 260px;
+    padding: 20px;
+    padding-bottom: 80px; /* Space for footer */
+    min-height: calc(100vh - 60px); /* Adjust for header */
+}
+
+.cat-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.cat-image {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Feed Button and Modal */
+.feed-container {
+    margin-top: 20px;
+}
+
+.feed-btn {
+    padding: 8px 20px;
+    font-size: 14px;
+}
+
+.feed-modal {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    min-width: 300px;
+    margin-top: 10px;
+}
+
+.feed-modal .modal-content {
+    border: none;
+    box-shadow: none;
+}
+
+.feed-modal .modal-header {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.feed-modal .modal-body {
+    padding: 15px 0;
+}
+
+.feed-modal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding-top: 10px;
+}
+
+.feed-modal .close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.feed-modal .form-group {
+    margin-bottom: 0;
+}
+
+.feed-modal .feed-amount {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+
+.feed-modal .btn {
+    margin-left: 5px;
+}
+
+/* Set Goal Modal */
+.set-goal-modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    width: 400px;
+    z-index: 9999; /* Ensure it's always on top */
+}
+
+/* Form styling for set goal modal */
+.set-goal-modal .form-group {
+    margin-bottom: 15px;
+}
+
+.set-goal-modal input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.set-goal-modal label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.set-goal-modal h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Modal buttons */
+.set-goal-modal .modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.set-goal-modal .modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.set-goal-modal .btn-primary {
+    background-color: #FF5722;
+    color: white;
+}
+
+.set-goal-modal .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+}
+
+/* Add overlay for set goal modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.modal-buttons button {
+    flex: 1;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Money History */
+.money-history {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* Progress Bar */
+.progress {
+    height: 20px;
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 180px;
+        left: 10px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+}
+
+/* Sticky Header */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Dashboard content container */
+.dashboard-content-container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+/* Cat name input */
+.cat-name-input {
+    max-width: 300px;
+    margin: 0 auto;
+    font-size: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+}
+
+/* Update landing page content container */
+.landing-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Increased gap between image and text */
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.text-content {
+    flex: 1;
+    text-align: left;
+    max-width: 400px; /* Control text width */
+}
+
+.text-content h2 {
+    font-size: 2.8rem; /* Slightly larger */
+    margin-bottom: 1rem;
+    color: #FF5722;
+}
+
+.text-content p {
+    font-size: 1.3rem;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Ensure content doesn't get hidden behind footer */
+.content-wrapper {
+    min-height: calc(100vh - 60px); /* Adjust based on footer height */
+    padding-bottom: 60px; /* Match footer height */
+}
+
+/* Sidebar buttons consistency */
+.export-btn, .set-goal-btn {
+    width: 100%;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.set-goal-btn {
+    background: #FF5722;
+    color: white;
+    border: none;
+}
+
+/* Progress text */
+.progress-text {
+    text-align: center;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.prediction-container {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 30px auto;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 1200px;
+    min-height: 500px;
+}
+
+#graph {
+    position: relative;
+    height: 450px;
+    margin: 20px 0;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.nav-tabs .nav-link {
+    color: #666;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-tabs .nav-link.active {
+    color: #FF5722;
+    border-bottom: 2px solid #FF5722;
+    background: none;
+}
+
+#predictionsList .list-group-item {
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    background-color: #f8f9fa;
+    transition: all 0.3s ease;
+}
+
+#predictionsList .list-group-item:hover {
+    background-color: #e9ecef;
+    transform: translateX(5px);
+}
+
+#predictionsList .badge {
+    background-color: #FF5722;
+    font-size: 14px;
+    padding: 8px 12px;
+}
+
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Calculator Styles */
+.calculator-card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.calculator-card .card-body {
+    padding: 20px;
+}
+
+.calculator-table {
+    margin-top: 10px;
+}
+
+.calculator-form-group {
+    margin-bottom: 15px;
+}
+
+.calculator-submit-btn {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.calculator-alert {
+    margin-bottom: 20px;
+}
+
+/* Calculator Table Styles */
+.calculator-table {
+    margin-top: 10px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.calculator-table table {
+    margin-bottom: 0;
+}
+
+.calculator-table th,
+.calculator-table td {
+    padding: 15px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.calculator-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.calculator-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Calculator Action Buttons */
+.calculator-action-btn {
+    padding: 8px 12px;
+    margin: 0 4px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+}
+
+.calculator-action-btn i {
+    font-size: 16px;
+}
+
+.calculator-action-btn:hover {
+    transform: scale(1.1);
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+/* Modal sizing for calculator */
+.modal-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    max-height: 90vh;
+}
+
+.modal-content {
+    height: 100%;
+    max-height: 90vh;
+    overflow: hidden;
+}
+
+.calculator-card {
+    height: 100%;
+    margin-bottom: 0;
+}
+
+.calculator-card .card-body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.calculator-card .table-responsive {
+    flex: 1;
+    overflow: auto;
+}
+
+/* Responsive adjustments for calculator */
+@media (max-width: 768px) {
+    .calculator-table th,
+    .calculator-table td {
+        padding: 10px;
+        font-size: 13px;
+    }
+    
+    .calculator-action-btn {
+        padding: 6px 10px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .calculator-action-btn i {
+        font-size: 14px;
+    }
+}
+
+/* Calculator Modal Styles */
+#calculateSavingsModal .modal-dialog {
+    max-width: 90%;
+    width: 1200px;
+    margin: 2rem auto;
+}
+
+#calculateSavingsModal .modal-content {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#calculateSavingsModal .modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+#calculateSavingsModal .modal-body {
+    padding: 2rem;
+}
+
+#calculateSavingsModal .modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid #dee2e6;
+}
+
+/* Calculator Form Styles */
+.calculator-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.calculator-card .card-body {
+    padding: 2rem;
+}
+
+.calculator-form-group {
+    margin-bottom: 1.5rem;
+}
+
+.calculator-form-group label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.calculator-form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.calculator-form-group input:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+/* Calculator Table Styles */
+.calculator-table {
+    margin-top: 2rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.calculator-table table {
+    margin-bottom: 0;
+}
+
+.calculator-table th {
+    background: #f8f9fa;
+    padding: 1rem;
+    font-weight: 600;
+    color: #333;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.calculator-table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.calculator-table tr:last-child td {
+    border-bottom: none;
+}
+
+.calculator-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* Calculator Action Buttons */
+.calculator-action-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+}
+
+.calculator-action-btn i {
+    font-size: 1rem;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.clear-btn {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.submit-btn {
+    background-color: #28a745;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    width: auto;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+.clear-btn:hover {
+    background-color: #5a6268;
+    transform: translateY(-2px);
+}
+
+.submit-btn:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+/* Calculator Alert Styles */
+.calculator-alert {
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #calculateSavingsModal .modal-dialog {
+        margin: 1rem;
+        width: auto;
+    }
+    
+    #calculateSavingsModal .modal-body {
+        padding: 1rem;
+    }
+    
+    .calculator-table th,
+    .calculator-table td {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
+    
+    .calculator-action-btn {
+        width: 35px;
+        height: 35px;
+    }
+}

@@ -1,0 +1,3 @@
+Content-Type: application/json
+
+{"predictions": [450.0, 510.0, 570.0, 630.0, 690.0, 750.0, 810.0]}
